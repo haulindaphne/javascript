@@ -1,0 +1,44 @@
+JAVASCRIPT - LES EVENEMENTS
+
+
+EVENEMENT 'ONCLICK'
+
+//recupérer le 1st p
+let p1 = document.querySelector('p');
+//crée un gestionnaire d'événements pour 'onclick'
+p1.onclick = function (){
+    //change le texte et la couleur du p
+    this.innerHTML = '<strong>Bravo ! </strong>';
+        this.style.color = 'orange';
+};
+
+On utilise une fonction anonyme pour ne pas qu'elle s'exécute immédiatement
+elle va s'exécuté au déclenchement de l'événement (quand on clique).
+
+
+MOUSEOVER - MOUVEDOWN - MOUSEUP - MOUSEOUT
+
+<p>Passez sur moi !</p>
+<p>Un deuxième <strong>paragraphe</strong></p>
+
+
+<script>
+     /******************************/
+    /* Exercices 1 et Exercuces 2 */
+    /******************************/
+
+    let div1 = document.querySelector('div');
+
+div1.addEventListener('mouseover', Fonction1);
+div1.addEventListener('mouseout', Reset1);
+function Fonction1() {
+   this.style.display = 'none';
+}
+
+function Reset1() {
+    this.style.display = 'block';
+}
+
+    /********************************/
+    /*********  Exercices 3  ********/
+    /********************************/

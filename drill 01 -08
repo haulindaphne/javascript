@@ -1,0 +1,308 @@
+The even/odd reporter
+
+Write a for loop that will iterate from 0 to 20. For each iteration, it will check if the current number is even or odd, and report that to the screen (e.g. "2 is even").
+
+
+for (var i = 0; i <= 20; i++) {
+    if (i % 2 === 0) {
+        console.log(i + ' is even');
+    } else {
+        console.log(i + ' is odd');
+    }
+}
+
+Multiplication Tables
+
+Write a for loop that will iterate from 0 to 10. For each iteration of the for loop, it will multiply the number by 9 and log the result (e.g. "2 * 9 = 18").
+
+Bonus: Use a nested for loop to show the tables for every multiplier from 1 to 10 (100 results total).
+
+
+// Multiplication tables
+var multiplier = 9;
+for (var i = 0; i <= 10; i++) {
+    var result = multiplier * i;
+    console.log(multiplier + ' * ' + i + ' = ' + result);
+}
+
+
+for (var multiplier = 0; multiplier <= 10; multiplier++) {
+ for (var i = 0; i <= 10; i++) {
+   var result = multiplier * i;
+   console.log(multiplier + ' * ' + i + ' = ' + result);
+ }
+}
+
+The Grade Assigner
+
+Check the results of your assignGrade function from the conditionals exercise by logging every value from 60 to 100: your log should show "For 88, you got a B. For 89, you got a B. For 90, you got an A. For 91, you got an A.", etc., logging each grade point in the range.
+
+function assignGrade(score) {
+    if (score > 90) {
+        return 'A';
+    } else if (score > 80) {
+        return 'B';
+    } else if (score > 70) {
+        return 'C';
+    } else if (score > 65) {
+        return 'D';
+    } else {
+        return 'F';
+    }
+}
+
+for (var i = 80; i <= 100; i++) {
+  console.log('For ' + i + ', you got a ' + assignGrade(i));
+}
+
+GENERER PYRAMIDE DE CHIFFRES
+Mon code:
+
+function generatePyramid(num) {
+let number = '';
+for (let i = 1; i <= num; i++) {
+console.log(number += i);}}
+undefined
+generatePyramid(5);
+
+1 
+12 
+123 
+1234 
+12345
+
+function generatePyramid(star) {
+let number = '';
+for (let i = 1; i <= star; i++) {
+console.log(number += '*'); }}
+generatePyramid(5);
+*
+**
+***
+****
+*****
+
+
+ARRAY
+Addition dans array
+Mon code:
+
+var arr = [1,2,3,4];
+var total=0;
+for(var i in arr) { total += arr[i]; }
+
+ACTEURS
+Mon code: 
+
+let actors = ["Dicaprio", "Willis", "Clooney"];
+for (let i = 0; i < actors.length; i++) {
+    console.log('Mon acteur' + (i + 1) + ' est ' + actors[i]);
+
+Mon acteur1 est Dicaprio 
+Mon acteur2 est Willis
+Mon acteur3 est Clooney
+
+BONUS:
+Mon code:
+
+for (let i = 0; i < actors.length; i++) {
+let actorNum = i + 1;
+let actorNumSuffix;
+if (actorNum == 1) {
+actorNumSuffix = "Le premier"; }
+else if (actorNum == 2) {
+actorNumSuffix = "Le deuxième"; }
+else if (actorNum == 3) {
+actorNumSuffix = "Le troisième"; }
+console.log('Mon' + actorNum + actorNumSuffix + 'acteur est' + actors[i]);}
+
+
+Mon1Le premieracteur estDicaprio 
+Mon2Le deuxièmeacteur estWillis 
+Mon3Le troisièmeacteur estClooney 
+
+CLONE
+Mon code:
+let game = ["Mario", "Luigi", "Peach"];
+
+console.log(game);
+Array [ "Mario", "Luigi", "Peach" ]
+
+console.log(game.push("Bowser"));
+4 
+
+console.log(game);
+Array [ "Mario", "Luigi", "Peach", "Bowser" ]
+
+
+JEU DU PENDU
+let wordLetters     = ['B', 'O', 'N', 'J', 'O', 'U', 'R'];
+let guessedLetters  = ['_', '_', '_', '_', '_', '_', '_'];
+
+function guessLetter(letter) {
+    let goodGuess = false;
+    let moreToGuess = false;
+    for (let i = 0; i < wordLetters.length; i++) {
+        if (wordLetters[i] == letter) {
+            guessedLetters[i] = letter;
+            goodGuess = true;
+        }
+        if (guessedLetters[i] == '_') {
+            moreToGuess = true;
+        }
+    }
+    if (goodGuess) {
+        console.log('Super, Vous avez trouvé une lettre!');
+        console.log(guessedLetters.join(''));
+        if (!moreToGuess) {
+            console.log('VOUS GAGNE!');
+        } 
+    } else {
+        console.log('Oh non, PERDU!');
+    }
+}
+
+EXERCICE : MINIMUM ET MAXIMUM
+Mon code: 
+
+let tab = [ 7, 5, -12, 6, 32, 18, 14, -2];
+
+let mini = tab.reduce(function(a, b) {
+return Math.min(a, b); });
+
+console.log(mini);
+-12 
+
+let tabMax = [-3,9,21,36,27,54,17,35];
+let maximum = tabMax.reduce(function(a, b) {
+return Math.max(a, b); });
+console.log(maximum);
+54
+
+let sum = mini + maximum;
+
+console.log(sum);
+42
+
+EXERCICE: ALEATOIRE 1
+Mon code:
+
+let floatBoat = 10.4;
+
+let couleBoat = Math.ceil(floatBoat);
+
+let voleBoat = Math.floor(floatBoat);
+
+console.log(couleBoat, voleBoat);
+
+11 10
+
+
+EXERCICE: ALEATOIRE 2
+Mon code: 
+
+let nomb = Math.floor(Math.random(50) * 101);
+
+console.log(nomb);
+5
+OU
+let min = 50;
+let max = 101;
+
+let nombre = Math.floor(Math.random(min) * max);
+console.log(nombre);
+
+La valeur aléatoire peut être seulement 0 ou 1
+let oneOrZero = (Math.random()>0.5)? 1 : 0;
+
+La valeur aléatoire peut aller de 0 à 10 inclu
+
+EXERCICE: ALEATOIRE 3
+
+crée un tableau qui contetient les valeurs suivantes : Goro, Johnny Cago, Kano, Liu Kano, Raiden, Reptil, Scorpion, Shang Tsun, Sonya, Sub-Zero
+choisir un personnage aléatoirement dans le tableau
+
+Mon code:
+let perso = ['Goro', 'Johnny Cago', 'Kano', 'Liu Kano', 'Raiden', 'Reptil', 'Scorpion', 'Shang Tsun', 'Sonya', 'Sub-Zero'];
+let rand = perso[(Math.random() * perso.length) | 0];
+
+
+Exercice : PNJ (Personnage non-joueur)
+
+    Crée un objet "Character" qui contient les informations suivantes :
+    name (string)
+    age (numero)
+    items_to_give (tableau)
+    afficher chaque information sur une ligne séparés dans la console (for in)
+    faire une fonction "giveItem" qui permet au PNJ de donner un objet aléatoirement
+
+Mon code:
+let string1 = "";     
+let character = { 
+    name: 'Pierrot',
+    age: 22,
+    items: ['bonnet', 'gants', 'écharpe', 'épée', 'yaourt', 'voiture']
+};
+for (let affiche in character) {
+    string1 = string1 + character[affiche];
+}
+let items = ['bonnet', 'gants', 'écharpe'];
+
+function giveItem(arr) {
+    return arr[Math.floor(Math.random() * arr.length)];
+}
+
+console.log(string1);
+console.log(giveItem(items));
+
+Exercice : Shop
+
+Crée un tableau avec des objets à vendre (épée, hache, sceptre, etc.)
+Caractéristique de chaque objet :
+
+    title (string)
+    physic (int)
+    magic (int)
+    minLevel (int)
+    available (boolean)
+
+Manipulation :
+
+    faire une fonction pour afficher tout les objets
+    faire une fonction pour afficher les objets disponibles
+    faire une fonction pour afficher les objets dont le niveau minimum est de 10
+
+Mon code:
+
+
+function Shop(title, physic, magic, minLevel, available) {
+            this.title = title;
+            this.physic = physic;
+            this.magic = magic;
+            this.minLevel = minLevel;
+            this.available = available;
+
+            this.genererMessage = function(){
+                console.log("L'objet est : " + this.title +
+                        '\nSa valeur est de : ' + this.physic +
+                        '\nSon pouvoir magique est de : ' + this.magic +
+                        '\nSon niveau est : ' + this.minLevel +
+                        '\nArticle disponible : ' + this.available);
+            }
+        }
+
+    let utilisateur1 = new Shop("épée", 25, 20, 10, false);
+    let utilisateur2 = new Shop("hache", 10, 10, 50, false);
+    let utilisateur3 = new Shop("sceptre", 5, 10, 15, true);
+
+    console.log(utilisateur1);
+    console.log(utilisateur2);
+    console.log(utilisateur3);
+
+    utilisateur1.genererMessage();
+    utilisateur2.genererMessage();
+    utilisateur3.genererMessage();
+
+
+
+

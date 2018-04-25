@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mouse</title>
+</head>
+<style>
+    .highlight {
+        opacity: 0.1;
+        background-color:
+    }
+</style>
+<body>
+    
+    <h1>Evènements keyboard</h1>
+
+    <div id="left">Left</div>
+    <div id="up">UP</div>
+    <div id="right">Right</div>
+    <div id="down">Down</div>
+
+
+
+
+<script>
+//******************************************
+//******  Exercices 1   ********************
+//******************************************
+    let div = document.querySelector('div');
+   document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 96:
+        div.style.color = 'blue';
+        break;
+        case 97:
+        div.style.color = "yellow";
+        break;
+        case 98:
+        div.style.color = "green";
+        break;
+        case 99:
+        div.style.color = "red";
+        break;
+        case 100:
+        div.style.color = "rose";
+        break;
+        case 101:
+        div.style.color = "purple";
+        break;
+        case 102:
+        div.style.color = "grey";
+        break;
+        case 103:
+        div.style.color = "	#7FFF00";
+        break;
+        case 104:
+        div.style.color = "	#FF1493";
+        break;
+        case 105:
+            div.style.color = '	#DAA520';
+            break;
+    }
+};
+
+//**********************************************
+//*******   Exercices 2 ************************
+//**********************************************1245
+    let left = document.getElementById('left');
+    let up = document.getElementById('up');
+    let right = document.getElementById('right');
+    let down = document.getElementById('down');
+   
+document.addEventListener("keydown", function(e) {
+    switch (e.keyCode) {
+    case 37 :
+    left.classList.add("highlight");
+    break;
+    case 38:
+    up.classList.add("highlight");
+    break;
+    case 39 :
+    right.classList.add("highlight");
+    break;
+    case 40 :
+    down.classList.add("highlight");
+    break;
+  }
+})
+
+document.addEventListener("keyup", function(e) {
+    switch (e.keyCode) {
+    case 37 :
+    left.classList.remove("highlight");
+    break;
+    case 38:
+    up.classList.remove("highlight");
+    break;
+    case 39 :
+    right.classList.remove("highlight");
+    break;
+    case 40 :
+    down.classList.remove("highlight");
+    break;
+  }
+})
+
+
+console.log(div);
+
+
+
+
+
+</script>
+    
+</body>
+</html>

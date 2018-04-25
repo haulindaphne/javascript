@@ -1,0 +1,78 @@
+html, body, * {
+    margin: 0 auto;
+}
+body {
+    background-image: url('images.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    width: 400px;
+    height: 400px;
+}
+
+.container1, .container2, #autoclic {
+    width: 400px;
+    height: 200px;
+    margin-top: 3%;
+}
+h4 {
+    font-weight: bold;
+    font-size: 26px;
+    text-shadow: 1px 3px white;
+}
+
+#buyCursorBtn, #autoCursor, #save, #load, #clic {
+    color: #212521;
+    background-color: #FE9CDA;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 50%;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-shadow: 1px 3px white;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.2s;
+    margin-top: 2%; 
+    width: 70px;
+    height: 70px;   
+}
+#buyCursorBtn:hover, #autoCursor:hover, #save:hover, #load:hover, #clic:hover {
+    background-color: #DACBAE;
+}
+#autoCursor, #clic {
+    width: 120px;
+    height: 120px;
+}
+@media all and (max-width:30em) {
+    #buyCursorBtn, #autoCursor {
+        display: block;
+        margin: 0.2em auto;
+    } 
+}
+
+#score, #display, #multiply, #test {
+    padding-top: 5%;
+
+}
+#display, #multiply , #test{
+    background-color: #DACBAE;
+    font-weight: 300;
+    width: 60%;
+    margin: auto;
+    border: 1px solid #FE9CDA;
+    border-radius: 2em;
+    margin-top: 5px;
+}
+img {
+    background-color: white;
+    width: 200px;
+}
+#multiply {
+    width: 75%;
+}
+p {
+    visibility: hidden;
+}
