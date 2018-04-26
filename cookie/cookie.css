@@ -1,29 +1,40 @@
-body {
-    background-image: url('../cookie/asset/image-de-mignon.jpe');
-}
 .container {
-    width: 800px;
+    background-image: url('../cookie/asset/image-de-mignon.jpe');
+    background-image: cover;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-gap: 5px;
+    width: 1800px;
     margin: auto;
 }
 #score {
+    grid-column: 1;
+    grid-row: 1;
     width: 250px;
     height: 250px;
     border-radius: 50%;
     box-shadow: 12px 12px 2px 1px #2CAAF7;
 }
 img {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
 }
 #container1, #container2 {
     width: 250px;
     height: 250px;
     margin: auto;
 }
+.container2 {
+    grid-column: 1;
+    grid-row: 3;
+}
 #bonus {
     margin-left: 5%;
 }
 #display {
+    grid-column: 3;
+    grid-row: 1;
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -38,22 +49,32 @@ img {
     font-weight: bold;
 }
 #saveLoad {
+    grid-column: 1;
+    grid-row: 2;
     margin-top: 3%;
     margin-left: 10%;
 }
 h4 {
+    grid-column: 2;
+    grid-row: 1;
     width: 250px;
-    margin-left: 10%;;
+    margin-left: 10%;
+    text-align: right;
+    font-size: 28px;
 }
-#save, #load, #buyCursorBtn, #autoCursor,#clic {
+#save, #load, #buyCursorBtn, #autoCursor,#clic, #bonusBtn {
 	border:none;
 	padding:6px 0 6px 0;
 	border-radius:2px;
-	box-shadow:3px 3px 12px #999;
+	box-shadow:3px 3px 12px #2CAAF7 #999;
 	background:#fff;
 	font:bold 13px Arial;
     color:#555;
     width: 50px;
+}
+#save:hover , #load:hover, #buyCursorBtn:hover, #autoCursor:hover, #clic:hover, #bonusBtn:hover {
+    background-color: #2caaf7;
+    color: white;
 }
 #multiply {
     padding-top: 2%;
@@ -63,10 +84,14 @@ h4 {
     color: #2caaf7;
     text-shadow: 2px 3px #082745;
 }
-#autoCursor, #buyCursorBtn, #autoclic, #clic {
+#autoCursor, #buyCursorBtn, #autoclic, #clic, #bonusBtn {
     width: 250px;
     margin-left: 5%;
     margin-top: 2%;
     margin-bottom: 2%;
 }
 
+#bonusTime {
+    grid-column: 1;
+    grid-row: 3;
+}
