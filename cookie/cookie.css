@@ -1,78 +1,72 @@
-html, body, * {
-    margin: 0 auto;
-}
 body {
-    background-image: url('images.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../cookie/asset/image-de-mignon.jpe');
 }
 .container {
-    width: 400px;
-    height: 400px;
-}
-
-.container1, .container2, #autoclic {
-    width: 400px;
-    height: 200px;
-    margin-top: 3%;
-}
-h4 {
-    font-weight: bold;
-    font-size: 26px;
-    text-shadow: 1px 3px white;
-}
-
-#buyCursorBtn, #autoCursor, #save, #load, #clic {
-    color: #212521;
-    background-color: #FE9CDA;
-    display: inline-block;
-    padding: 0.3em 1.2em;
-    margin: 0 0.3em 0.3em 0;
-    border-radius: 50%;
-    box-sizing: border-box;
-    text-decoration: none;
-    text-shadow: 1px 3px white;
-    font-weight: bold;
-    text-align: center;
-    transition: all 0.2s;
-    margin-top: 2%; 
-    width: 70px;
-    height: 70px;   
-}
-#buyCursorBtn:hover, #autoCursor:hover, #save:hover, #load:hover, #clic:hover {
-    background-color: #DACBAE;
-}
-#autoCursor, #clic {
-    width: 120px;
-    height: 120px;
-}
-@media all and (max-width:30em) {
-    #buyCursorBtn, #autoCursor {
-        display: block;
-        margin: 0.2em auto;
-    } 
-}
-
-#score, #display, #multiply, #test {
-    padding-top: 5%;
-
-}
-#display, #multiply , #test{
-    background-color: #DACBAE;
-    font-weight: 300;
-    width: 60%;
+    width: 800px;
     margin: auto;
-    border: 1px solid #FE9CDA;
-    border-radius: 2em;
-    margin-top: 5px;
+}
+#score {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: 12px 12px 2px 1px #2CAAF7;
 }
 img {
-    background-color: white;
-    width: 200px;
+    width: 250px;
+    height: 250px;
+}
+#container1, #container2 {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+#bonus {
+    margin-left: 5%;
+}
+#display {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 10%;
+    background-color: #2caaf7;
+    text-align: center;
+    line-height: 6em;
+    white-space: nowrap;
+    text-shadow: 1px 3px #082745;
+    box-shadow: 8px 8px 2px 1px #082745;
+    color: white;
+    font-weight: bold;
+}
+#saveLoad {
+    margin-top: 3%;
+    margin-left: 10%;
+}
+h4 {
+    width: 250px;
+    margin-left: 10%;;
+}
+#save, #load, #buyCursorBtn, #autoCursor,#clic {
+	border:none;
+	padding:6px 0 6px 0;
+	border-radius:2px;
+	box-shadow:3px 3px 12px #999;
+	background:#fff;
+	font:bold 13px Arial;
+    color:#555;
+    width: 50px;
 }
 #multiply {
-    width: 75%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-family: 'Gamja Flower', cursive;
+    font-size: 26px;
+    color: #2caaf7;
+    text-shadow: 2px 3px #082745;
 }
-p {
-    visibility: hidden;
+#autoCursor, #buyCursorBtn, #autoclic, #clic {
+    width: 250px;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
+
