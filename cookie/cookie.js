@@ -1,7 +1,6 @@
 let score = 0;
-let price = 5;
-let multiplier = 1;
-let interval = 300;
+let price = 50;
+let multiplier = 1; // variable du multiplicateur
 let display = document.getElementById("display");
 
 //augmentation du score à chaque click
@@ -10,6 +9,9 @@ function increase() {
     document.getElementById('display').innerHTML = score;
 }
 
+//fonction multiplicateur - les clicks auront de plus en plus de points
+//jusqu'au 6ème multiplicateur.
+//Ensuite les multiplicateur couteront 2x plus chers.
 function augmenterMultiplicateur() {
     if(multiplier <= 6) {
     multiplier = multiplier * 2;
@@ -22,7 +24,7 @@ function augmenterMultiplicateur() {
         }
     }
 
-
+//fonction d'achat de multiplicateur qui déduit le prix du score
 function buyMultiplicator() {
     if(score >= price) {
         augmenterMultiplicateur()
@@ -34,7 +36,7 @@ function buyMultiplicator() {
         alert("Vous n'avez pas assez de points! Cliquez encore.");
     }
 }
-//Autoclick
+//Autoclick - quand activer, le bouton disparait de la fenêtre
 function clicker() {
     if(score >= 200) {
         let time = setInterval(increase, 1000); 
@@ -46,6 +48,7 @@ function clicker() {
     }
 }
 
+//Autoclick - quand activer, le bouton disparait de la fenêtre et coute 500 points
 function autoClicker() {
     if(score >= 500) {
         setInterval(increase, 500);
@@ -68,6 +71,7 @@ function bonus() {
         alert("Vous êtes encore fauché? Mais cliquez plus vite!!!")
     }
 }
+//appel du bonus + du compte à rebours dans cette fonction
 function doubleBonus(){
     bonus();
     newCount();
@@ -79,15 +83,18 @@ function doubleBonus(){
     }
 }
 
+// l'incrementation est doublée pendant le temps du bonus
 function increaseBonus(){
     score += (2 * multiplier);
     document.getElementById('display').innerHTML = score;
 }
 
-//fonction save
+//fonction save - sauvegarde du score
 function save() {
     localStorage.setItem("score", score);
 }
+
+//Chargement du score sauvegardé.
 function load() {
     score = localStorage.getItem("score");
     score = parseInt(score);
@@ -95,7 +102,7 @@ function load() {
     document.getElementById('display').innerHTML = score;
 }
 
-//compteur
+//compteur - appelé dans la fonction doubleBonus
 let counter = 30;
 function newCount() {
 let newCount = setInterval(function() {

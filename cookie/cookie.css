@@ -1,5 +1,10 @@
+* {
+    font-family: 'Gamja Flower', cursive;
+}
+
 .container {
     background-image: url('../cookie/asset/image-de-mignon.jpe');
+    background-image: no-repeat;
     background-image: cover;
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -15,6 +20,7 @@
     height: 250px;
     border-radius: 50%;
     box-shadow: 12px 12px 2px 1px #2CAAF7;
+    background-color: white;
 }
 img {
     width: 200px;
@@ -75,6 +81,8 @@ h4 {
 #save:hover , #load:hover, #buyCursorBtn:hover, #autoCursor:hover, #clic:hover, #bonusBtn:hover {
     background-color: #2caaf7;
     color: white;
+    border-radius: 25px;
+    
 }
 #multiply {
     padding-top: 2%;
@@ -82,7 +90,7 @@ h4 {
     font-family: 'Gamja Flower', cursive;
     font-size: 26px;
     color: #2caaf7;
-    text-shadow: 2px 3px #082745;
+    text-shadow: 1px 2px 3px #082745;
 }
 #autoCursor, #buyCursorBtn, #autoclic, #clic, #bonusBtn {
     width: 250px;
@@ -94,4 +102,15 @@ h4 {
 #bonusTime {
     grid-column: 1;
     grid-row: 3;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50px;
+}
+
+#becode {
+    width: 50px;
+    height: 50px;
 }
