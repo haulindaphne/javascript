@@ -6,25 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jeu des Paires</title>
     <script src="lesPaires.js"></script>
+
+    <style>
+        img {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <h1>Voici le jeu des paires</h1>
     <h3>Le but du jeu est de trouvé le plus rapidement possible chaque paire</h3>
 
-    <div class="container">
+    <div class="memoryBoard">
         <div class="contPictures">
-      
+            <table>
+                <tr>
+                    <td><img src="../lesPaires/asset/joker.jpg" onclick="choose(0)"></td>
+                    <td><img src="../lesPaires/asset/joker.jpg" onclick="choose(1)"></td>
+                    <td><img src="../lesPaires/asset/joker.jpg" onclick="choose(2)"></td>
+                </tr>
+                <tr>
+                    <td><img src="../lesPaires/asset/joker.jpg" onclick="choose(3)"></td>
+                    <td><img src="../lesPaires/asset/joker.jpg" onclick="choose(4)"></td>
+                    <td><img src="../lesPaires/asset/joker.jpg" onclick="choose(5)"></td>
+
+                </tr>
+
+            </table>
+   
         </div><!-- fin .contPictures -->
 
 
-        <div class="containerBtn">
-            <form>
-                <input type="button" value="Commencez">
-                <input type="button" value="Affichez les cartes">
-                <input type="button" onclick="startGame()" value="Nouvelle partie">
-            </form>
-         </div><!-- fin .containerBtn -->
-    </div><!-- fin .container -->
+    </div><!-- fin .memoryBoard -->
 
     
 </body>
