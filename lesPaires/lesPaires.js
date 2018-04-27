@@ -4,17 +4,23 @@ let second;
 let match = 0;
 
 let cards = [];
-cards[0] = '../lesPaires/asset/anehihan.jpg';
-cards[1] = '../lesPaires/asset/chatminou.jpg';
-cards[2] = '../lesPaires/asset/chientoutou.jpg';
-cards[3] = '../lesPaires/asset/chientoutou.jpg';
-cards[4] = '../lesPaires/asset/anehihan.jpg';
-cards[5] = '../lesPaires/asset/chatminou.jpg';
+cards[0] = '../lesPaires/asset/batman.png';
+cards[1] = '../lesPaires/asset/catwoman.png';
+cards[2] = '../lesPaires/asset/IvyProfileImage.png';
+cards[3] = '../lesPaires/asset/jokerlego.png';
+cards[4] = '../lesPaires/asset/pinguoin.png';
+cards[5] = '../lesPaires/asset/IvyProfileImage.png';
+cards[6] = '../lesPaires/asset/catwoman.png';
+cards[7] = '../lesPaires/asset/batman.png';
+cards[8] = '../lesPaires/asset/jokerlego.png';
+cards[9] = '../lesPaires/asset/pinguoin.png';
+cards[10] = '../lesPaires/asset/RiddlerProfile.png';
+cards[11] = '../lesPaires/asset/RiddlerProfile.png';
+
 
 //function shuffle de array cards
 function shuffle(array) {
     let counter = array.length;
-    
     while (counter > 0) {
         let index = Math.floor(Math.random() * counter);
         counter--;
@@ -52,8 +58,8 @@ function control(){
     numClick = 0;
     if (cards[second] == cards[first]) {
         match++;
-        if (match == 3) {
-            alert("Vous avez trouvé toutes les cartes! Bravo.");
+        if (match == 6) {
+            alert("Vous avez trouvé toutes les cartes! \nBravo.");
             location.reload();
         }
     }
